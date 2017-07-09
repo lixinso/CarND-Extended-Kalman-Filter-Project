@@ -52,7 +52,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
 
 	float c1 = px*px + py*py;
 	float c2 = sqrt(c1);
-	float c3 = sqrt(c1*c2);
+	float c3 = c1*c2;
 
 	if(fabs(c1)< 0.0000001){
 		std::cout<<"Error: CalculateJacobian. Divided by zero exception." << std::endl;
